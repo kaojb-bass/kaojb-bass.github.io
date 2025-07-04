@@ -50,6 +50,7 @@ footer {
 	bottom: 0px;
     display: flex;
     justify-self: center;
+    justify-content: center;
 }
 
 .img-placehold {
@@ -59,6 +60,7 @@ footer {
     width: 170px;
     height: 170px;
     margin: 5%;
+    border: 3px solid rgb(36, 72, 77),
 }
 
 .featured-bar {
@@ -72,4 +74,75 @@ footer {
 .nav-link {
  size: 10%;
  color: white;
+}
+
+.nav-btn {
+ size: 10%;
+ font-weight: bold;
+ color: white;
+ background-color: rgb(184, 76, 119);
+ border-radius: 20%;
+ padding: 3% 4%;
+}
+
+
+p {
+  color: white;
+  display: flex;
+  justify-items: flex-end;
+  text-align: right;
+}
+
+.test {
+  background-image: url("Exp3.gif");
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(209, 7, 202, 0.8) 0 0 70px 5px;
+}
+
+.banner img {
+  width: 80%;
+  display: block;
+}
+
+.trap {
+  --cut: 25%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50vw;        
+  background: black;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%);
+
+  padding-left: 10%;
+  box-sizing:border-box;
+
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+
+  color:#fff;
+}
+
+.trap-text{
+  display:inline-block;
+}
+
+.links {
+  display: inline-block;
+}
+
+i {
+  padding: 5%;
+  font-size: 500%;
+}
+
+footer h1{
+  display: inline;
 }
