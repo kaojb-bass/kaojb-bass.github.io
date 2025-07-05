@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Press+Start+2P&family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap");
+*{font-family: "Space Grotesk", sans-serif; }
+
 body {
     background-color: rgb(32, 32, 32);
 }
@@ -25,23 +29,26 @@ body {
     display: inline-flex;
 }
 
-nav {
-    background-color: #1a1a1a;
-}
-
 .featured {
-  width: 30%;
+  width: 25%;
+  height: 400px;
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;  
-  border: 1px solid rgb(220, 220, 220);
-  border-radius: 30px;
+  border: 10px solid rgb(59, 56, 56);
   background-color:  #1a1a1a;
   flex-direction: column;
   align-items: center;
 }
 
-footer {
+.featured:hover {
+   border: 10px solid rgb(43, 103, 124);
+  width: 30%;
+  height: 450px;
+  box-shadow: rgba(135, 212, 182, 0.8) 0 0 30px 2px;
+}
+
+.footer {
 	background-color: #1a1a1a;
 	width: 100%;
 	color: white;
@@ -57,34 +64,40 @@ footer {
     display: flex;
     justify-items: center;
     background-color: rgb(88, 120, 124);
-    width: 170px;
-    height: 170px;
-    margin: 5%;
-    border: 3px solid rgb(36, 72, 77),
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(36, 72, 77);
 }
 
 .featured-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 4% 0;
+    margin: 3% 0;
 
 }
 
 .nav-link {
  size: 10%;
  color: white;
+ display: inline-flex;
+ margin: 0% 2%;
+}
+
+.nav-link:hover {
+    font-family: "Press Start 2P", system-ui;
+    size:1%;
 }
 
 .nav-btn {
- size: 10%;
- font-weight: bold;
- color: white;
- background-color: rgb(184, 76, 119);
- border-radius: 20%;
- padding: 3% 4%;
+  size: 10%;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(38, 102, 97);
+  border-radius: 20%;
+  padding: 3% 4%;
+  margin: 3px;
 }
-
 
 p {
   color: white;
@@ -101,7 +114,8 @@ p {
   position: relative;
   width: 100%;
   height: auto;
-  box-shadow: rgba(209, 7, 202, 0.8) 0 0 70px 5px;
+  box-shadow: rgba(209, 7, 202, 0.8) 0 0 60px 3px;
+   z-index:-1;
 }
 
 .banner img {
@@ -117,7 +131,7 @@ p {
   right: 0;
   height: 100%;
   width: 50vw;        
-  background: black;
+  background: #1a1a1a;
   clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%);
 
   padding-left: 10%;
@@ -135,7 +149,9 @@ p {
 }
 
 .links {
-  display: inline-block;
+  flex-wrap: nowrap;
+  display: flex;
+  align-content: flex-end;
 }
 
 i {
@@ -146,3 +162,46 @@ i {
 footer h1{
   display: inline;
 }
+
+#nav-right {
+  --cut: 60px;                    /* width of the angled slice (px or %) */
+  --pad: 1.2rem;                  /* inside padding around the links      */
+
+  top:0; right:0;
+  
+  display:flex;
+  background:#284957;
+  padding: var(--pad) calc(var(--pad) + 2rem) var(--pad) calc(var(--pad) + var(--cut));
+
+  /* angled LEFT side */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%);
+
+  /* optional niceties */
+  z-index:1000;  /* keep it above page content  */
+  backdrop-filter:blur(20px);  /* glass‑like look if you prefer   */
+}
+
+.nav-link:hover .nav-btn{
+  background:#1f3a46;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 60px 100%);
+  padding: var(--pad) 2rem var(--pad) calc(var(--pad) + var(--cut));
+}
+
+.featured:hover .nav-btn{
+  font-family: "Press Start 2P", system-ui;
+  background-color: rgb(25, 85, 128);
+}
+
+.hide {
+  display: none;
+}
+
+.featured:hover .hide{
+  display: block;
+}
+
+audio {
+  color: white;
+}
+
+h1 {display:block;}
