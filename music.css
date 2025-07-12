@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Press+Start+2P&family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap");
+*{font-family: "Space Grotesk", sans-serif; }
+
+body {
+    background-color: rgb(32, 32, 32);
+}
+
+#cover {
+    background-color: rgb(112, 135, 138);
+    height: 500px;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    margin: 1%;
+    padding: 1%;
+}
+
+#nav-right {
+    display: inline-flex;
+    justify-items: flex-end;
+}
+
+#nav-left {
+    display: inline-flex;
+}
+
+.featured {
+  width: 25%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;  
+  border: 10px solid rgb(59, 56, 56);
+  background-color:  #1a1a1a;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 0px 0px rgb(34, 52, 52);
+  transition: width 0.5s, height 0.5s;
+}
+
+.featured:hover {
+  border: 10px solid rgb(43, 103, 124);
+  width: 30%;
+  height: 450px;
+  box-shadow: rgba(135, 212, 182, 0.8) 0 0 30px 2px;
+}
+
+.footer {
+	background-color: #1a1a1a;
+	width: 100%;
+	color: white;
+	padding: 38px 0;
+	left: 0px;
+	bottom: 0px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+}
+
+.img-placehold {
+    display: flex;
+    justify-items: center;
+    background-color: rgb(88, 120, 124);
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(36, 72, 77);
+}
+
+.featured-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 0;
+
+}
+
+.nav-link {
+ size: 10%;
+ color: white;
+ display: inline-flex;
+ margin: 0% 2%;
+}
+
+.nav-link:hover {
+    font-family: "Press Start 2P", system-ui;
+    size:1%;
+}
+
+.nav-btn {
+  size: 10%;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(38, 102, 97);
+  border-radius: 20%;
+  padding: 3% 4%;
+  margin: 3px;
+}
+
+p {
+  color: white;
+  display: flex;
+  justify-items: flex-end;
+  text-align: right;
+}
+
+.test {
+  background-image: url("Exp3.gif");
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(209, 7, 202, 0.8) 0 0 60px 3px;
+   z-index:-1;
+}
+
+.banner img {
+  width: 80%;
+  display: block;
+}
+
+.trap {
+  --cut: 25%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50vw;        
+  background: #1a1a1a;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%);
+
+  padding-left: 10%;
+  box-sizing:border-box;
+
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+
+  color:#fff;
+}
+
+.trap-text{
+  display:inline-block;
+}
+
+.links {
+  flex-wrap: nowrap;
+  display: flex;
+  align-content: flex-end;
+}
+
+i {
+  padding: 5%;
+  font-size: 500%;
+}
+
+footer h1{
+  display: inline;
+}
+
+#nav-right {
+  --cut: 60px;                    /* width of the angled slice (px or %) */
+  --pad: 1.2rem;                  /* inside padding around the links      */
+
+  top:0; right:0;
+  
+  display:flex;
+  background:#284957;
+  padding: var(--pad) calc(var(--pad) + 2rem) var(--pad) calc(var(--pad) + var(--cut));
+
+  /* angled LEFT side */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%);
+
+  /* optional niceties */
+  z-index:1000;  /* keep it above page content  */
+  backdrop-filter:blur(20px);  /* glass‑like look if you prefer   */
+
+   box-shadow: 15px 15px 0px 0px rgb(228, 228, 228);
+}
+
+.nav-link:hover .nav-btn{
+  background:#1f3a46;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 60px 100%);
+  padding: var(--pad) 2rem var(--pad) calc(var(--pad) + var(--cut));
+}
+
+.featured:hover .nav-btn{
+  font-family: "Press Start 2P", system-ui;
+  background-color: rgb(25, 85, 128);
+}
+
+.hide {
+  display: none;
+}
+
+.featured:hover .hide{
+  display: block;
+}
+
+audio {
+  color: white;
+}
+
+h1 {display:block;}
+
+.music {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.music_lib {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    background-color: #1f3a46;
+}
+
+.music_player {
+    
+    width: 65%;
+    height: 80%;
+    display: flex;
+    background-color: #1f3a46;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color:#1f3a46;
+    background-color: #fff;
+    border-radius: 50%;
+    size:1%;
+}
+
+.music_btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background:rgba(209, 7, 202);
+    border-radius: 4px;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: darkorchid;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}

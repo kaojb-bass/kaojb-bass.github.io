@@ -13,7 +13,7 @@
             <a class="nav-link" href="" id="nav-left">JACOB PRANOTO</a>
         <span id="nav-right">
                 <a class="nav-link" href="">About</a>
-                <a class="nav-link" href="">Projects</a>
+                <a class="nav-link" href="projects.html">Projects</a>
                 <a class="nav-link" href="">Contact</a>
         </span>
         </nav>
@@ -21,25 +21,26 @@
 
     <div class="banner"> 
         <img src="Exp3.gif" alt="">
-         <div class="trap"> <span class="trap-text"> Hey! I'm a second year student studying AI in a Bachelor of Advanced Computer Science at the Unitversity of Western Australia.</span> </div>
+         <div class="trap">  <p class="trap-text" id="introText"></p> <span class="trap-text"> Hey! I'm a second year student studying AI in a Bachelor of Advanced Computer Science at the Unitversity of Western Australia.</span> </div>
     </div>
 
     <div class="featured-bar">
         <div class="featured"> 
             <div class="img-placehold"></div>
             <p class="hide">View My CS and Game Design Projects</p>
-            <a class="nav-btn" href="">PROJECTS</a>
+            <a class="nav-btn" href="projects.html">PROJECTS</a>
         </div>
         <div class="featured"> 
             <div class="img-placehold"></div>
             <p class="hide">Listen to my music</p>
-            <a class="nav-btn" href="">MUSIC</a>
+            <a class="nav-btn" href="music.html">MUSIC</a>
         </div>
         <div class="featured"> 
             <div class="img-placehold"></div>
             <p class="hide">More about me and my skills</p>
             <a class="nav-btn" href="">ABOUT</a>
         </div>
+        <audio src="audio/computer-mouse-click-351398.mp3"> </audio>
     </div>
 
     <div class="footer">
@@ -53,6 +54,54 @@
         
     </div>
 
-    <h2>New </h2>
+    <script>
+    const hover = document.querySelectorAll(".featured");
+    const audio = document.querySelector("audio");
+
+    hover.addEventListener("mouseover", () => {audio.play()});
+    hover.addEventListener("mouseoff", () => {audio.pause()});
+
+    const writing = [
+      "UWA Student",
+      "AI Major",
+      "Music Producer",
+      "Game Designer",
+      "Programmer",
+      "Bassist"
+    ];
+
+    let writingindex = 0; // which message we are on
+    let index = 0; // how many letters of the message are shown
+    let writtenNow = writing[writingindex]; // the current message being typed
+    let typingForward = true; // are we typing forward or deleting?
+
+
+    function typeWriter() {
+      const textElement = document.getElementById("introText");
+      textElement.textContent = writtenNow.substring(0, index);
+
+      if (typingForward) {
+        index++;
+        if (index > writtenNow.length) {
+          typingForward = false;
+          setTimeout(typeWriter, 1000); // pause before deleting
+        } else {
+          setTimeout(typeWriter, 100); // keep typing
+        }
+      } else {
+        index--;
+        if (index < 0) {
+          typingForward = true;
+          writingindex = (writingindex + 1) % writing.length;
+          writtenNow = writing[writingindex];
+          setTimeout(typeWriter, 1000); // pause before typing next
+        } else {
+          setTimeout(typeWriter, 50); // faster delete
+        }
+      }
+    }
+
+    typeWriter(); // Start animation
+  </script>
 </body>
 </html>
