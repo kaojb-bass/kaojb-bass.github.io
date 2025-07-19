@@ -1,0 +1,158 @@
+section {
+    height: 100%;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.about-buttons {
+    position: absolute;
+    box-shadow: none;
+    right: 12%;
+    bottom: 95em;
+}
+
+.about-section {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: rgb(37,37,38);
+    top: 12%;
+    left: 24%;
+    border-bottom-right-radius: 5%;
+}
+
+.about-glow {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+     top: 12%;
+    left: 24%;
+    animation: bodybg 2s 0s linear infinite alternate;
+    z-index: -1;
+    box-shadow: rgba(19, 217, 247, 0.8) 0 0 60px 3px;
+    border-bottom-right-radius: 5%;
+}
+
+@keyframes bodybg{
+  from   {box-shadow:rgba(209, 7, 202, 0.8) 0 0 60px 3px}
+  to     {box-shadow:rgba(42, 103, 138, 0.8) 0 0 60px 3px}
+}
+
+.stats {
+    display: none;
+}
+
+.about-desc {
+    display: none;
+}
+
+#about-desc {
+    margin: 12%;
+}
+
+#about-desc p{
+    position: static;
+    margin: 8% 0%;
+}
+
+.software {
+    display: none;
+}
+
+.about-buttons {
+    position: absolute;
+    box-shadow: none;
+    right: 6%;
+    top: 8%;
+}
+
+.about-margins {
+    position: absolute;
+    left: 25%;
+    width: 60%;
+    margin: 3% 11%;
+}
+
+#about-desc {
+    text-align: left;
+    line-height: normal;
+}
+
+.barS {
+    background-color: rgb(39, 82, 122);
+    height: 1em;
+    width: 1%;
+}
+
+.barEmpty {
+    background-color: black;
+    width: 100%;
+    height: 1em;
+}
+
+#stats {
+    display: none;
+}
+
+#pfp {
+    position: absolute;
+    align-self: flex-start;
+    left: 2%;
+    width: 45%;
+    z-index: 2;
+}
+
+#skills {
+    display: none;
+}
+
+button {
+  background-color: rgb(45,45,48);
+  border: none;
+  color: white;
+  padding: 6px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 15%;
+}
+
+button:hover {
+    background-color: rgb(45,45,48);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.icon {
+  aspect-ratio: 1 / 1; /* Keeps it square */
+  background-color: #444;
+  border: 2px solid #666;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #888;
+  transform: scale(1.1);
+}
+
+#about-btn {
+    background-color: rgb(37,37,38);
+}

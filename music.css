@@ -3,7 +3,8 @@
 *{font-family: "Space Grotesk", sans-serif; }
 
 body {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(30,30,30);
+    position: relative;
 }
 
 #cover {
@@ -105,7 +106,6 @@ p {
   color: white;
   display: flex;
   justify-items: flex-end;
-  text-align: right;
 }
 
 .test {
