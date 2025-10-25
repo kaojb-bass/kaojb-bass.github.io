@@ -141,7 +141,7 @@ button:hover {
 }
 
 .icon {
-  aspect-ratio: 1 / 1; /* Keeps it square */
+  aspect-ratio: 1 / 1;
   background-color: #444;
   border: 2px solid #666;
   transition: background-color 0.2s ease, transform 0.2s ease;

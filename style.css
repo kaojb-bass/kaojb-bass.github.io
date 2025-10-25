@@ -235,3 +235,13 @@ audio {
 .box:hover {
   transform: translateY(-20px);
 }
+
+#C {
+  width: 90%;
+  margin: 0 4px;
+}
+
+#Csharp {
+  width: 90%;
+  margin: 0 4px;
+}

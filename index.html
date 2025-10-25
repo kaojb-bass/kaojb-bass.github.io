@@ -43,10 +43,12 @@
             <div class="grid-container">
                 <div class="icon"> <img src="Images/Python.svg"></div>
                 <div class="icon"> <img src="Images/Java.svg"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
+                <div class="icon"> <img src="Images/C_Programming_Language.svg" id="C"></div>
+                <div class="icon"> <img src="Images/Logo_C_sharp.svg" id="Csharp"></div>
+                <div class="icon"> <img src="Images/unity-original.svg"></div>
+                <div class="icon"> </div>
+                <div class="icon"> </div>
+                <div class="icon"> </div>
             </div>
             </div>
             <div id="stats"> 
@@ -103,13 +105,13 @@ const audio = document.querySelector("audio");
 
 hover.forEach(element => {
   element.addEventListener("mouseover", () => {
-    audio.currentTime = 0; // optional: restart sound
+    audio.currentTime = 0;
     audio.play();
   });
 
   element.addEventListener("mouseout", () => {
     audio.pause();
-    audio.currentTime = 0; // optional: reset playback
+    audio.currentTime = 0;
   });
 });
 
@@ -122,10 +124,10 @@ hover.forEach(element => {
       "Bassist"
     ];
 
-    let writingindex = 0; // which message we are on
+    let writingindex = 0;
     let index = 0; // how many letters of the message are shown
-    let writtenNow = writing[writingindex]; // the current message being typed
-    let typingForward = true; // are we typing forward or deleting?
+    let writtenNow = writing[writingindex];
+    let typingForward = true;
 
 
     function typeWriter() {
@@ -153,7 +155,7 @@ hover.forEach(element => {
       }
     }
 
-    typeWriter(); // Start animation
+    typeWriter();
 
     function aboutReveal() {
   var x = document.getElementById("about-desc");
